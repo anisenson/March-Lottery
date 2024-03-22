@@ -31,31 +31,31 @@
         </div>
 
         <div class="row justify-content-center p-3">
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="form-group">
-                <input type="text" class="form-control" id="nameInputBox" placeholder="Enter names here">
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter names here">
                 </div>
             </div>
-            <div class="col-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-lg-3 col-sm-12">
+                <button type="submit" id="addNameBtn" class="btn btn-primary">Add Name</button>
+                <button type="submit" id="resetNameBtn" class="btn btn-primary">Reset Names</button>
             </div>
+            
         </div>
-
-
 
         <div class="row m-2 g-2 ">
             <div class="col-8 p-2 ">
                 <div class="card">
-                    <div class="card-body" id="listNamesDisplay">
-                      <h2>here is the list of names</h2>
+                    <div class="card-body">
+                        <ul id="nameList" class="list-group">name list</ul>
                     </div>
                 </div>
             </div>
 
             <div class="col-4 p-2">
                 <div class="card">
-                    <div class="card-body" id="selectedNameDisplay">
-                      <h2>Winner:</h2>
+                    <div class="card-body">
+                        <ul id="winnerDisplay" class="list-group">winner display</ul>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
 
         <div class="row text-center">
             <div class="col-12">
-                <button type="button" class="btn btn-primary btn-lg">Randomize!</button>
+                <button type="button" id="randomizeBtn" class="btn btn-primary btn-lg">Randomize!</button>
             </div>
         </div>
 
