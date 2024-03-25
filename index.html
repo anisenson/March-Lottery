@@ -7,75 +7,93 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="style.css" />
+    
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
+
+      <!--Icon Font-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class=" p-3 text-center">
+    <header class="p-3 text-center">
         <h1>Lucky me Lottery !!</h1>
     </header>
 
-    <main>
-        <div class="container">
-        <div class="row justify-content-center ">
-            <div class="col-8 text-center p-3 ">
-                <h5>this is the description of my website Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-sm-12 text-center p-3">
+                <h5>This is the description of my website. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Aperiam accusantium dolorem sapiente magni temporibus repudiandae ut, dolores corrupti facilis
                     laboriosam.
                 </h5>
             </div>
         </div>
 
-        <div class="row justify-content-center p-3">
-            <div class="col-lg-6 col-sm-12">
-                <div class="form-group">
-                <input type="text" class="form-control" id="nameInput" placeholder="Enter names here">
-                </div>
+        <div class="row justify-content-center p-3 g-2">
+            <div class="col-md-8 col-sm-12">
+                <form id="nameForm"> <!-- Form element added here -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter names here">
+                    </div>
+                </form>
             </div>
-            <div class="col-lg-3 col-sm-12">
-                <button type="submit" id="addNameBtn" class="btn btn-primary">Add Name</button>
-                <button type="submit" id="resetNameBtn" class="btn btn-primary">Reset Names</button>
+            <div class="col-md-4 col-sm-12 d-flex align-items-center justify-content-center">
+                <button type="submit" id="addNameBtn" class="btn customBtn me-2">Add Name</button>
+                <button type="submit" id="resetNameBtn" class="btn customBtn ms-2">Reset Names</button>
             </div>
-            
+
         </div>
 
-        <div class="row m-2 g-2 ">
-            <div class="col-8 p-2 ">
+        <div class="row m-2 g-2">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <ul id="nameList" class="list-group">name list</ul>
+                        <ul id="nameList" class="list-group">Name list</ul>
                     </div>
                 </div>
             </div>
 
-            <div class="col-4 p-2">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <ul id="winnerDisplay" class="list-group">winner display</ul>
+                        <ul id="winnerDisplay" class="list-group">and the winner is .... </ul>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <div class="row text-center">
             <div class="col-12">
-                <button type="button" id="randomizeBtn" class="btn btn-primary btn-lg">Randomize!</button>
+                <button type="button" id="randomizeBtn" class="btn customBtn btn-lg">Randomize!</button>
             </div>
         </div>
-
     </div>
-    </main>
 
-
-
-
-    <footer>
-        <!-- place footer here -->
+    <footer class=" text-center text-lg-start p-3 mt-5 ">
+        <div class="row justify-content-center align-items-center g-4">
+            
+            <div class="col-md-3 text-center">
+                <h3 class="">Created by Adam Nisenson</h3>
+            </div>
+            <div class="col-md-3 text-center ">
+              
+                <button type="button" class="btn customBtn btn-lg" onclick="window.open('https://github.com/anisenson', '_blank');"><i
+                        class="fab fa-github"></i></button>
+                <button type="button" class="btn customBtn btn-lg" onclick="window.open('https://anisenson.github.io/Gallery/', '_blank');">Gallery
+                </button>
+            </div>
+        </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
