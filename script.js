@@ -34,7 +34,7 @@ function displayNames() {
         span.textContent = name
 
 
-        li.appendChild(span)//adds a span tag nested between every <li> tag (the child)
+        li.appendChild(span)//adds a span tag nested between every <li> tag 
         nameList.appendChild(li)
     }
 
@@ -44,7 +44,7 @@ function displayNames() {
 
 // Event listener for the Enter key press
 document.getElementById('nameForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
     addName(); // Call the addName function
 });
 
