@@ -55,7 +55,7 @@ function pickRandomName() {
    const randomName = namesArray[randomNumber]
 
 
-   randomNameDiv.textContent = randomName
+   randomNameDiv.textContent = "and the winner is... " + randomName;
 
 
    namesArray.splice(randomNumber, 1)
