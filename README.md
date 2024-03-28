@@ -1,1 +1,1 @@
-
+Welcome to the Lucky Me Lottery Website! Enter your name below and click "Add Name" to join the pool of potential winners. Once all names are added, hit the "Randomize" button at the bottom of the page to see whose luck shines brightest today!
