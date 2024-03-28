@@ -3,65 +3,69 @@ const namesArray = []
 
 
 function addName() {
-   const nameInput = document.getElementById('nameInput') // storing name input element as a variable
-   const name = nameInput.value.trim() //get the TRIMMED value of the input box and store in a var
-  
-   namesArray.push(name) //add the name to the end of the array
-   displayNames() //call the displayNames function to update the list
-  
-   nameInput.value = '' //Clear the input field after adding the name
+    const nameInput = document.getElementById('nameInput') // storing name input element as a variable
+    const name = nameInput.value.trim() //get the TRIMMED value of the input box and store in a var
+
+    // Check if the name is not blank
+    if (name !== "") {
+        namesArray.push(name); // Add the name to the end of the array
+        displayNames(); // Call the displayNames function to update the list
+    } else {
+        alert("Please enter a valid name."); // Show an alert if the name is blank
+    }
+    nameInput.value = '' //Clear the input field after adding the name
 }
 
 
 function displayNames() {
-   const nameList = document.getElementById('nameList')
-   nameList.innerHTML = '' //clear out the previous list items
+    const nameList = document.getElementById('nameList')
+    nameList.innerHTML = '' //clear out the previous list items
 
 
-   for (let i = 0; i < namesArray.length; i++){
-       const name = namesArray[i]
+    for (let i = 0; i < namesArray.length; i++) {
+        const name = namesArray[i]
 
 
-       const li = document.createElement('li')
-       li.className = 'list-group-item'
+        const li = document.createElement('li')
+        li.className = 'list-group-item'
 
 
-       const span = document.createElement('span')
-       span.textContent = name
+        const span = document.createElement('span')
+        span.textContent = name
 
 
-       li.appendChild(span)//adds a span tag nested between every <li> tag (the child)
-       nameList.appendChild(li)
-   }
+        li.appendChild(span)//adds a span tag nested between every <li> tag (the child)
+        nameList.appendChild(li)
+    }
 
 
 }
 
 
 // Event listener for the Enter key press
-document.getElementById('nameForm').addEventListener('submit', function(event) {
-   event.preventDefault(); // Prevent the default form submission
-   addName(); // Call the addName function
+document.getElementById('nameForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    addName(); // Call the addName function
 });
 
 
 function pickRandomName() {
-   const randomNameDiv = document.getElementById('randomName')
-   randomNameDiv.textContent = ''
+    const randomNameDiv = document.getElementById('randomName')
+    randomNameDiv.textContent = ''
 
 
-   //Generate and select a random name from names array
-   const randomNumber = Math.floor(Math.random() * namesArray.length)
-   const randomName = namesArray[randomNumber]
+    //Generate and select a random name from names array
+    const randomNumber = Math.floor(Math.random() * namesArray.length)
+    const randomName = namesArray[randomNumber]
 
 
-   randomNameDiv.textContent = "and the winner is... " + randomName;
+    randomNameDiv.textContent = "and the winner is... " + randomName;
 
 
-   namesArray.splice(randomNumber, 1)
+    namesArray.splice(randomNumber, 1)
 
 
-   displayNames();
+    displayNames();
 
 
 }
@@ -76,6 +80,6 @@ document.getElementById('pickRandomBtn').addEventListener('click', pickRandomNam
 function resetNames() {
     namesArray.length = 0; // Empty the array
     displayNames(); // Update the list display
- }
- 
+}
+
 document.getElementById('resetNameBtn').addEventListener('click', resetNames);
