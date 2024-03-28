@@ -73,3 +73,9 @@ document.getElementById('addNameBtn').addEventListener('click', addName)
 //Event listener for the button click to select and diplay a rndm name
 document.getElementById('pickRandomBtn').addEventListener('click', pickRandomName)
 
+function resetNames() {
+    namesArray.length = 0; // Empty the array
+    displayNames(); // Update the list display
+ }
+ 
+document.getElementById('resetNameBtn').addEventListener('click', resetNames);
