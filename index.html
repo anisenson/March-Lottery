@@ -1,71 +1,87 @@
 <!doctype html>
 <html lang="en">
 
+
 <head>
     <title>Lucky Me Lottery</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    
+
+
+
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-        <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-      <!--Icon Font-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
     <header class="p-3 text-center">
         <h1>Lucky me Lottery !!</h1>
     </header>
 
+
     <div class="container">
+
+
         <div class="row justify-content-center">
             <div class="col-lg-8 col-sm-12 text-center p-3">
-                <h5>Welcome to the Lucky Me Lottery Website! Enter your name below and click "Add Name" to join the pool of potential winners. Once all names are added, hit the "Randomize" button at the bottom of the page to see whose luck shines brightest today!
+                <h5>Welcome to the Lucky Me Lottery Website! Enter your name below and click "Add Name" to join the pool
+                    of potential winners. Once all names are added, hit the "Randomize" button at the bottom of the page
+                    to see whose luck shines brightest today!
                 </h5>
             </div>
         </div>
 
-        <div class="row justify-content-center g-2 mb-5">
-            <div class="col-md-8 col-sm-12">
-                <form id="nameForm"> <!-- Form element added here -->
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="nameInput" placeholder="Enter names here">
+
+        <div class="row">
+            <div class="col-8">
+                <div class="row mb-3">
+                    <div class="col-8">
+                        <form id="nameForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nameInput" placeholder="Enter names here">
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
 
-            <div class="col-md-2 text-center">
-                <button type="submit" id="addNameBtn" class="btn customBtn">Add Name</button>
-            </div>
-            <div class="col-md-2 text-center">
-                <button type="submit" id="resetNameBtn" class="btn customBtn">Reset Names</button>
-            </div>
 
-        </div>
+                    <div class="col-2">
+                        <button type="submit" id="addNameBtn" class="btn customBtn customBtn1">Add Name</button>
+                    </div>
 
-        <div class="row mb-5">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <ul id="nameList" class="list-group">Name list</ul>
+
+                    <div class="col-2">
+                        <button type="submit" id="resetNameBtn" class="btn customBtn customBtn1">Reset</button>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <ul id="nameList" class="list-group">Names</ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4">
+            <div class="col-4">
                 <div class="card">
                     <div class="card-body">
                         <ul id="randomName" class="list-group">and the winner is .... </ul>
@@ -74,24 +90,30 @@
             </div>
         </div>
 
-        <div class="row text-center">
+
+
+
+        <div class="row text-center mt-5">
             <div class="col-12">
                 <button type="button" id="pickRandomBtn" class="btn customBtn btn-lg">Randomize!</button>
             </div>
         </div>
     </div>
 
+
     <footer class=" text-center text-lg-start p-3 mt-5 ">
         <div class="row justify-content-center align-items-center g-4">
-            
+
             <div class="col-md-3 text-center">
                 <h3 class="">Created by Adam Nisenson</h3>
             </div>
             <div class="col-md-3 text-center ">
-              
-                <button type="button" class="btn customBtn btn-lg" onclick="window.open('https://github.com/anisenson', '_blank');"><i
+
+                <button type="button" class="btn customBtn btn-lg"
+                    onclick="window.open('https://github.com/anisenson', '_blank');"><i
                         class="fab fa-github"></i></button>
-                <button type="button" class="btn customBtn btn-lg" onclick="window.open('https://anisenson.github.io/Gallery/', '_blank');">Gallery
+                <button type="button" class="btn customBtn btn-lg"
+                    onclick="window.open('https://anisenson.github.io/Gallery/', '_blank');">Gallery
                 </button>
             </div>
         </div>
@@ -101,12 +123,16 @@
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
+
     <script src="script.js"></script>
 
+
 </body>
+
 
 </html>
